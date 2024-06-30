@@ -1,0 +1,11 @@
+cmake --build . --target clean
+cmake --build . --config RelWithDebInfo
+cmake --build . --parallel=8
+cmake --build . --target install --config Release
+
+INSTALL PLUGIN obfuscator SONAME 'libobfuscator.dll';
+UNINSTALL PLUGIN obfuscator;
+
+cp .\libobfuscator.dll  C:\Users\djomla\Desktop\CppProjects\mariadb\sql\lib\plugin\
+
+.\sql\RelWithDebInfo\mysqld.exe --console --plugin_maturity=0 --verbose
