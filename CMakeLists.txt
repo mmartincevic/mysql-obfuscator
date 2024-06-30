@@ -1,0 +1,2 @@
+MYSQL_ADD_PLUGIN(obfuscator obfuscator.cc RECOMPILE_FOR_EMBEDDED
+  MODULE_ONLY MODULE_OUTPUT_NAME "libobfuscator")
